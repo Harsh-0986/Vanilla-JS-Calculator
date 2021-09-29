@@ -1,0 +1,69 @@
+@import url("http://fonts.cdnfonts.com/css/gotham-rounded");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham Rounded", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, rgb(8, 240, 47), rgb(8, 135, 240));
+}
+
+.grid-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid white;
+  outline: none;
+}
+
+.grid-container button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.previous-operand {
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.current-operand {
+  font-size: 2rem;
+  color: white;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
